@@ -1,0 +1,316 @@
+*{
+    font-style: italic;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#contaner{
+    width: fit-content;
+    display: grid;
+    height: fit-content;
+    padding: 10px;
+    border: 1px solid #DDDDDD;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin:40px auto;
+    grid-template-areas: 
+    "parentInput   contentProduct "
+    "preparation   preparation  "
+    "count devise"
+    ;
+}
+#parentInput{
+    height: fit-content;
+    font-size: 30px;
+    width: fit-content;
+}
+#header{
+    background-color:#2a9d8f ;
+    width: 100%;
+    height:60px;
+    text-align: center;
+    line-height:60px;
+    box-shadow: inset 5px 5px 10px #dddddd7b
+}
+#header > b{
+    letter-spacing: .5px;
+    word-spacing: 1px;
+    font-size: 30px;
+}
+input[type="text"] , #addBtn1 , #addBtn2{
+    border: none;
+    outline: solid 1px #98a279;
+    background-color: #ffffff;
+    padding: 4px;
+    border-radius: 5px;
+    margin: 10px;
+    display: flex;
+    font-size: .6em;
+    cursor: pointer;
+}
+ #addBtn1 , #addBtn2{
+    background-color:  transparent;
+    box-shadow: inset 5px 5px 10px #dddddd;
+    transition: 1s;
+}
+#contentInput , #contentProduct {
+    background-color: #d8f3dc4b;   
+    outline: solid 1px #656d4a94;
+    box-shadow: inset 5px 5px 10px #ddd;
+    width: fit-content; 
+    margin: 10px;
+    padding: 10px;
+    height: fit-content;
+    border-radius: 9px;
+}
+#contentProduct{
+    text-align: center;
+    display: block;
+    width: 95%;
+    font-size: 20px;
+}
+#contentProduct > hr{
+    width: 140px;
+    margin:10px auto;
+}
+#contentProduct > b{
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    font-size: 20px;
+}
+#comments{
+    padding: 10px;
+    width: 240px;
+    min-height:70px ;
+    margin: 10px;
+    background-color: #d8f3dc4b;   
+    outline: solid 1px #656d4a94;
+    box-shadow: inset 5px 5px 10px #ddd;
+    border: none;
+    display: block;
+    border-radius: 9px;
+}
+#btnComment2{
+    font-size: 15px;
+    height: 24px;
+    padding: 3px;
+    font-weight: bold;
+    background-color:  transparent;
+    outline: solid 1px #656d4a;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 1s;
+    margin-left:2px ;
+    margin-top: 14px;
+}
+ #btnComment1:hover{
+    box-shadow: inset 1px 1px 1px #dddddd;
+    background-color:#2a9d8f;
+}
+#btnComment2{
+    background-color:#2a9d8f;
+    animation: send 2s linear infinite;
+}
+@keyframes send{
+    0%{
+    background-color:  #2a9d8f;
+    }
+    50%{
+    background-color: #ddd;
+    }
+    100%{
+    background-color:  #2a9d8f;
+    }
+}
+#btnComment2:hover{
+    animation-play-state: paused;
+}
+#contentInput{
+    padding: 1px;
+    margin-bottom: 25px;
+}
+#addBtn2:hover{
+    box-shadow: inset 1px 1px 1px #dddddd;
+    background-color: #2a9d8f;
+    color: white;
+}
+#addBtn1:hover{
+    box-shadow: inset 1px 1px 1px #dddddd;
+    background-color: #2a9d8f;
+    color: white;
+}
+#contentProduct{
+    max-width: 70em;
+    min-height: 200px; 
+    overflow-y:auto;
+    grid-area: contentProduct; 
+}
+#input1{
+    display: flex;
+}
+#preparation{
+    background-color: #d8f3dc4b;   
+    outline: solid 1px #656d4a94;
+    box-shadow: inset 5px 5px 10px #ddd;
+    max-width:97%;
+    min-height: 170px; 
+    grid-area: preparation;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 10px;
+    border-radius: 9px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    text-align: center;
+}
+#preparation > hr{
+    width: 140px;
+    margin:10px auto;
+}
+#count > b{
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    font-size: 20px;
+}
+#count hr{
+    width: 160px;
+    margin:10px auto;
+}
+#count , #devise{
+    width: 188px;
+    height: 100px;
+    background-color: #d8f3dc4b;   
+    outline: solid 1px #656d4a94;
+    box-shadow: inset 5px 5px 10px #ddd;
+    grid-area: count;
+    margin-left: 10px;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 9px;
+}
+#count{
+    width: 19em;
+    height: 160px;
+}
+#devise{
+    grid-area: devise;
+    width: 96%;
+    height: 160px;
+    word-break: break-all;
+    text-align:left;
+    overflow-y: auto;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    font-size: 20px;
+    line-height: 20px;
+}
+#devise b{
+    color: #2a9d8f;
+}
+#devise hr{
+    width: 125px;
+    margin:10px 0;
+}
+#dblbtn{
+    display: flex;
+}
+#devise > p{
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    font-size: 15px;
+}
+[onclick]{
+    background-color: transparent;
+    outline: solid 1px #656d4a;
+    border: none;
+    border-radius: 3px;
+    padding: 5px;
+    font-size: 12px;
+    margin-left: 2px;
+    transition: 1s;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+[onclick]:hover{
+    cursor: pointer; 
+    box-shadow: inset 1px 1px 1px #dddddd;
+    background-color: #2a9d8f;
+
+}
+i[class="fa-solid fa-heart"]{
+    color: #2a9d8f;
+    border: 1px solid #DDDDDD;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius:5px;
+    padding: 3px;
+    margin-left: 9px;
+    transition: 1s;
+}
+i[class="fa-solid fa-heart"]:hover{
+    color: red;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+ @media(max-width : 700px){
+#contaner{
+    display: block;
+}
+#dblbtn{
+    display: flex;
+    flex-direction: row;
+}
+#contentInput{
+    margin:10px auto;
+}
+#parentInput{
+    display: flex;
+}
+#btnComment2{
+    padding: 5px;
+}
+#count{
+    width: 96%;
+    height: 160px;
+}
+#contaner{
+    margin:10px ;
+}
+#parentInput{
+    display: flex;
+    flex-direction: column; 
+    margin: auto;
+}
+}
+@media(max-width : 500px){
+#parentInput{
+    display: flex;
+    flex-direction: column; 
+}
+#comments{
+    margin: auto;
+}
+#dblbtn{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+#count{
+    height: 120px;
+}
+#contaner{
+    margin:10px ;
+}
+#btnComment2{
+    margin-left: 10px;
+}
+#preparation{
+    height: 200px;
+}
+}
+
+
+
+
+
